@@ -1,4 +1,4 @@
-### Develop and deploy an NFT Smart Contract (ERC721)
+## Develop and deploy an NFT Smart Contract (ERC721)
 
 **Tutorial**: [Youtube](https://www.youtube.com/watch?v=veBu03A6ptw) - [Alchemy Docs](https://docs.alchemy.com/docs/1-how-to-develop-an-nft-smart-contract-erc721-with-alchemy)
 
