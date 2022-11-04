@@ -1,0 +1,16 @@
+{
+  "description": "My first test on web3",
+  "external_url": "https://github.com/falconandrea",
+  "image": "https://ipfs.filebase.io/ipfs/QmRWaLMQTtS6mMmLzdzviytKUxErUPZtxLNzVzDane9rRi",
+  "name": "ERC721 My first test",
+  "attributes": [
+    {
+      "trait_type": "Token standard",
+      "value": "ERC721"
+    },
+    {
+      "trait_type": "Is a Test?",
+      "value": "Yes"
+    }
+  ]
+}
