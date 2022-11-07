@@ -11,7 +11,9 @@
 5. Use [Ethers.js](https://docs.ethers.io) to interact with the contract.
 
 **Commands and output**:
+
 _Run test Buy-Coffee script in local:_
+
 `npx hardhat run scripts/buy-coffee.js`
 
 ```
@@ -34,6 +36,8 @@ At 1667844618, Luigi (0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC) said: "Random 
 At 1667844619, Simone (0x90F79bf6EB2c4f870365E785982E1f101E93b906) said: "Awesome message"
 ```
 
+---
+
 _Deploy the contract on the blockchain without specify a network (on local):_
 
 `npx hardhat run script/deploy.js`
@@ -43,12 +47,16 @@ It returns always the same address `0x5FbDB2315678afecb367f032d93F642f64180aa3`
 BuyMeACoffee deployed to  0x5FbDB2315678afecb367f032d93F642f64180aa3
 ```
 
+---
+
 _Deploy the contract on a specific blockchain (you can insert new networks in the file `hardhat.config.js`):_
 
 `npx hardhat run script/deploy.js --network goerli`
 
 This command deploy the contract on Goerli Blockchain and return the Goerli address. Each time you will run the command, you will deploy the contract to a new address.
 You can see it on [Goerli Etherscan](https://goerli.etherscan.io/).
+
+---
 
 _Collect all tips with Withdraw script:_
 
