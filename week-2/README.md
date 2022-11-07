@@ -41,6 +41,7 @@ At 1667844619, Simone (0x90F79bf6EB2c4f870365E785982E1f101E93b906) said: "Awesom
 _Deploy the contract on the blockchain without specify a network (on local):_
 
 `npx hardhat run script/deploy.js`
+
 It returns always the same address `0x5FbDB2315678afecb367f032d93F642f64180aa3`
 
 ```
