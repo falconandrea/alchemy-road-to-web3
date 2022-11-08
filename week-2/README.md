@@ -40,7 +40,7 @@ At 1667844619, Simone (0x90F79bf6EB2c4f870365E785982E1f101E93b906) said: "Awesom
 
 _Deploy the contract on the blockchain without specify a network (on local):_
 
-`npx hardhat run script/deploy.js`
+`npx hardhat run scripts/deploy.js`
 
 It returns always the same address `0x5FbDB2315678afecb367f032d93F642f64180aa3`
 
@@ -52,7 +52,7 @@ BuyMeACoffee deployed to  0x5FbDB2315678afecb367f032d93F642f64180aa3
 
 _Deploy the contract on a specific blockchain (you can insert new networks in the file `hardhat.config.js`):_
 
-`npx hardhat run script/deploy.js --network goerli`
+`npx hardhat run scripts/deploy.js --network goerli`
 
 This command deploy the contract on Goerli Blockchain and return the Goerli address. Each time you will run the command, you will deploy the contract to a new address.
 You can see it on [Goerli Etherscan](https://goerli.etherscan.io/).
@@ -61,6 +61,6 @@ You can see it on [Goerli Etherscan](https://goerli.etherscan.io/).
 
 _Collect all tips with Withdraw script:_
 
-`npx hardhat run script/withdraw.js`
+`npx hardhat run scripts/withdraw.js`
 
 This command take from `.env` file the contract address deployed with the previous command and the network. If there are funds on the contract, they are sent to the owner wallet.
