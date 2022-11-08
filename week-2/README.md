@@ -64,3 +64,17 @@ _Collect all tips with Withdraw script:_
 `npx hardhat run scripts/withdraw.js`
 
 This command take from `.env` file the contract address deployed with the previous command and the network. If there are funds on the contract, they are sent to the owner wallet.
+
+---
+
+**Getting Started with NextJS**
+
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
