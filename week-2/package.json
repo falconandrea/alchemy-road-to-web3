@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +20,11 @@
     "hardhat": "^2.12.2"
   },
   "dependencies": {
+    "eslint": "8.27.0",
+    "eslint-config-next": "13.0.2",
+    "next": "13.0.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "dotenv": "^16.0.3"
   }
 }
