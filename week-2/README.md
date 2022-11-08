@@ -10,7 +10,13 @@
 4. Deploy a front-end on [Replit](https://replit.com/)
 5. Use [Ethers.js](https://docs.ethers.io) to interact with the contract.
 
-**Commands and output**:
+**Hardhat Commands and output**:
+
+_Compile your contract and create json in artifacts folder:_
+
+`npx hardhat compile --force`
+
+---
 
 _Run test Buy-Coffee script in local:_
 
@@ -57,6 +63,8 @@ _Deploy the contract on a specific blockchain (you can insert new networks in th
 This command deploy the contract on Goerli Blockchain and return the Goerli address. Each time you will run the command, you will deploy the contract to a new address.
 You can see it on [Goerli Etherscan](https://goerli.etherscan.io/).
 
+**When deploy for the first time on a specific network, you can get the contract address and save in .env file for use in your Buy Me a Coffee page.**
+
 ---
 
 _Collect all tips with Withdraw script:_
@@ -67,14 +75,12 @@ This command take from `.env` file the contract address deployed with the previo
 
 ---
 
-**Getting Started with NextJS**
+**Getting Started with NextJS**:
 
 First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
