@@ -23,10 +23,21 @@ contract BuyMeACoffee {
 
   // Owner address
   address payable owner;
+  address payable withdrawAddress;
 
   // Deploy logic, it runs only first time!!
   constructor() {
     owner = payable(msg.sender);
+    withdrawAddress = owner;
+  }
+
+  /**
+  * @dev change owner address
+  * @param _newAddress new address
+  */
+  function updateOwnerAddress(address _newAddress) public {
+    require(payable(msg.sender) == owner, 'You not are the owner!');
+    withdrawAddress = payable(_newAddress);
   }
 
   /**
@@ -49,7 +60,7 @@ contract BuyMeACoffee {
   */
   function withdrawTips() public {
     // address(this).balance > contains all balance inside the contract
-    require(owner.send(address(this).balance));
+    require(withdrawAddress.send(address(this).balance));
   }
 
   /**
