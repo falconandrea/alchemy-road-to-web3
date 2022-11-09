@@ -239,13 +239,13 @@ export default function Home () {
 
       {currentAccount && (<h2 className={styles.titleMemos}>Memos received</h2>)}
 
-      {currentAccount && memos.length === 0 && (<span className={styles.titleMemos}>No memos sent.</span>)}
+      {currentAccount && memos.length === 0 && (<span className={styles.noMemosMessage}>No memos sent.</span>)}
 
       {currentAccount && (memos.map((memo, idx) => {
         return (
           <div key={idx} className={styles.memo}>
             <strong>"{memo.message}"</strong>
-            <p>From: {memo.name} at {memo.time.toString()}</p>
+            <p>From: {memo.name} at {memo.time ? memo.time.toString() : ''}</p>
           </div>
         )
       }))}

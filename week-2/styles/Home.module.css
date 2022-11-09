@@ -43,6 +43,7 @@
 }
 .noMemosMessage {
   text-align: center;
+  display: block;
   margin-bottom: 2rem;
 }
 
