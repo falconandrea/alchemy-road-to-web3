@@ -9,3 +9,13 @@
 **Technologies used**: Alchemy, OpenZeppelin Wizard, Remix IDE, Ethereum Goerli and Solidity.
 
 [More info](https://github.com/falconandrea/alchemy-road-to-web3/tree/main/week-1)
+
+---
+
+## Second week
+
+### Create a "Buy Me a Coffee" Dapp
+
+**Technologies used**: Alchemy, Solidity, Hardhat, Ethereum Goerli, NextJs, EthersJS, Replit.
+
+[More info](https://github.com/falconandrea/alchemy-road-to-web3/tree/main/week-2)
