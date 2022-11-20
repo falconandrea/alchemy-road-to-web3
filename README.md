@@ -19,3 +19,13 @@
 **Technologies used**: Alchemy, Solidity, Hardhat, Ethereum Goerli, NextJs, EthersJS, Replit.
 
 [More info](https://github.com/falconandrea/alchemy-road-to-web3/tree/main/week-2)
+
+---
+
+## Third week
+
+### Create an NFT with On-Chain Metadata
+
+**Technologies used**: Alchemy, Solidity, Hardhat, Polygon Mumbai, EthersJS.
+
+[More info](https://github.com/falconandrea/alchemy-road-to-web3/tree/main/week-3)

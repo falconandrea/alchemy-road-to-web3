@@ -1,13 +1,54 @@
-# Sample Hardhat Project
+## How to build an NFT with On-Chain Metadata
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+**Tutorial**: [Youtube](https://www.youtube.com/watch?v=8FJvY4zXvPE) - [Alchemy Docs](https://docs.alchemy.com/docs/how-to-make-nfts-with-on-chain-metadata-hardhat-and-javascript)
 
-Try running some of the following tasks:
+**What I learn**:
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
+1. How to store NFTs metadata on chain
+2. What is Polygon and why it's important to lower Gas fees.
+3. How to deploy on Polygon Mumbai
+4. How to process and store on-chain SVG images and JSON objects
+5. How to modify your metadata based on your interactions with the NFT
+
+**Hardhat Commands and output**:
+
+_Compile your contract and create json in artifacts folder:_
+
+`npx hardhat compile --force`
+
+---
+
+_Run test script in local:_
+
+`npx hardhat run scripts/test.js`
+
 ```
+ChainBattles deployed to  0x5FbDB2315678afecb367f032d93F642f64180aa3
+characterInfo base64 data:application/json;base64,eyJsZXZlbCI6ICIxIiwiaHAiOiAiMjAiLCJtcCI6ICIxNSIsInNwZWVkIjogIjEwIiwic3RyZW5ndGgiOiAiMTUifQ==
+characterURI base64 data:application/json;base64,eyJuYW1lIjogIkNoYWluIEJhdHRsZXMgIzEiLCJkZXNjcmlwdGlvbiI6ICJCYXR0bGVzIG9uIGNoYWluIiwiaW1hZ2UiOiAiZGF0YTppbWFnZS9zdmcreG1sO2Jhc2U2NCxQSE4yWnlCNGJXeHVjejBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01DOXpkbWNpSUhCeVpYTmxjblpsUVhOd1pXTjBVbUYwYVc4OUluaE5hVzVaVFdsdUlHMWxaWFFpSUhacFpYZENiM2c5SWpBZ01DQXpOVEFnTXpVd0lqNDhjM1I1YkdVK0xtSmhjMlVnZXlCbWFXeHNPaUIzYUdsMFpUc2dabTl1ZEMxbVlXMXBiSGs2SUhObGNtbG1PeUJtYjI1MExYTnBlbVU2SURFMGNIZzdJSDA4TDNOMGVXeGxQanh5WldOMElIZHBaSFJvUFNJeE1EQWxJaUJvWldsbmFIUTlJakV3TUNVaUlHWnBiR3c5SW1Kc1lXTnJJaUF2UGp4MFpYaDBJSGc5SWpVd0pTSWdlVDBpTWpBbElpQmpiR0Z6Y3owaVltRnpaU0lnWkc5dGFXNWhiblF0WW1GelpXeHBibVU5SW0xcFpHUnNaU0lnZEdWNGRDMWhibU5vYjNJOUltMXBaR1JzWlNJK1YyRnljbWx2Y2p3dmRHVjRkRDQ4ZEdWNGRDQjRQU0kxTUNVaUlIazlJak13SlNJZ1kyeGhjM005SW1KaGMyVWlJR1J2YldsdVlXNTBMV0poYzJWc2FXNWxQU0p0YVdSa2JHVWlJSFJsZUhRdFlXNWphRzl5UFNKdGFXUmtiR1VpUGt4bGRtVnNjem9nTVR3dmRHVjRkRDQ4ZEdWNGRDQjRQU0kxTUNVaUlIazlJalF3SlNJZ1kyeGhjM005SW1KaGMyVWlJR1J2YldsdVlXNTBMV0poYzJWc2FXNWxQU0p0YVdSa2JHVWlJSFJsZUhRdFlXNWphRzl5UFNKdGFXUmtiR1VpUGtoUU9pQXlNQ0F0SUUxUU9pQXhOVHd2ZEdWNGRENDhkR1Y0ZENCNFBTSTFNQ1VpSUhrOUlqVXdKU0lnWTJ4aGMzTTlJbUpoYzJVaUlHUnZiV2x1WVc1MExXSmhjMlZzYVc1bFBTSnRhV1JrYkdVaUlIUmxlSFF0WVc1amFHOXlQU0p0YVdSa2JHVWlQbE53WldWa09pQXhNQ0F0SUZOMGNtVnVaM1JvT2lBeE5Ud3ZkR1Y0ZEQ0OEwzTjJaejQ9In0=
+characterInfo base64 after train data:application/json;base64,eyJsZXZlbCI6ICIyIiwiaHAiOiAiMjMiLCJtcCI6ICIyMCIsInNwZWVkIjogIjEzIiwic3RyZW5ndGgiOiAiMjIifQ==
+characterURI base64 after train data:application/json;base64,eyJuYW1lIjogIkNoYWluIEJhdHRsZXMgIzEiLCJkZXNjcmlwdGlvbiI6ICJCYXR0bGVzIG9uIGNoYWluIiwiaW1hZ2UiOiAiZGF0YTppbWFnZS9zdmcreG1sO2Jhc2U2NCxQSE4yWnlCNGJXeHVjejBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01DOXpkbWNpSUhCeVpYTmxjblpsUVhOd1pXTjBVbUYwYVc4OUluaE5hVzVaVFdsdUlHMWxaWFFpSUhacFpYZENiM2c5SWpBZ01DQXpOVEFnTXpVd0lqNDhjM1I1YkdVK0xtSmhjMlVnZXlCbWFXeHNPaUIzYUdsMFpUc2dabTl1ZEMxbVlXMXBiSGs2SUhObGNtbG1PeUJtYjI1MExYTnBlbVU2SURFMGNIZzdJSDA4TDNOMGVXeGxQanh5WldOMElIZHBaSFJvUFNJeE1EQWxJaUJvWldsbmFIUTlJakV3TUNVaUlHWnBiR3c5SW1Kc1lXTnJJaUF2UGp4MFpYaDBJSGc5SWpVd0pTSWdlVDBpTWpBbElpQmpiR0Z6Y3owaVltRnpaU0lnWkc5dGFXNWhiblF0WW1GelpXeHBibVU5SW0xcFpHUnNaU0lnZEdWNGRDMWhibU5vYjNJOUltMXBaR1JzWlNJK1YyRnljbWx2Y2p3dmRHVjRkRDQ4ZEdWNGRDQjRQU0kxTUNVaUlIazlJak13SlNJZ1kyeGhjM005SW1KaGMyVWlJR1J2YldsdVlXNTBMV0poYzJWc2FXNWxQU0p0YVdSa2JHVWlJSFJsZUhRdFlXNWphRzl5UFNKdGFXUmtiR1VpUGt4bGRtVnNjem9nTWp3dmRHVjRkRDQ4ZEdWNGRDQjRQU0kxTUNVaUlIazlJalF3SlNJZ1kyeGhjM005SW1KaGMyVWlJR1J2YldsdVlXNTBMV0poYzJWc2FXNWxQU0p0YVdSa2JHVWlJSFJsZUhRdFlXNWphRzl5UFNKdGFXUmtiR1VpUGtoUU9pQXlNeUF0SUUxUU9pQXlNRHd2ZEdWNGRENDhkR1Y0ZENCNFBTSTFNQ1VpSUhrOUlqVXdKU0lnWTJ4aGMzTTlJbUpoYzJVaUlHUnZiV2x1WVc1MExXSmhjMlZzYVc1bFBTSnRhV1JrYkdVaUlIUmxlSFF0WVc1amFHOXlQU0p0YVdSa2JHVWlQbE53WldWa09pQXhNeUF0SUZOMGNtVnVaM1JvT2lBeU1qd3ZkR1Y0ZEQ0OEwzTjJaejQ9In0=
+```
+
+---
+
+_Deploy the contract on the blockchain without specify a network (on local):_
+
+`npx hardhat run scripts/deploy.js`
+
+It returns always the same address `0x5FbDB2315678afecb367f032d93F642f64180aa3`
+
+```
+ChainBattles deployed to  0x5FbDB2315678afecb367f032d93F642f64180aa3
+```
+
+---
+
+_Deploy the contract on a specific blockchain (you can insert new networks in the file `hardhat.config.js`):_
+
+`npx hardhat run scripts/deploy.js --network mumbai`
+
+This command deploy the contract on Polygon Mumbai Blockchain and return the Mumbai address. Each time you will run the command, you will deploy the contract to a new address.
+You can see it on [Mumbai Polygonscan](https://mumbai.polygonscan.com/).
+
+**When deploy for the first time on a specific network, you can get the contract address and use it with the Polygonscan to interact with your contract.**
