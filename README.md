@@ -29,3 +29,13 @@
 **Technologies used**: Alchemy, Solidity, Hardhat, Polygon Mumbai, EthersJS.
 
 [More info](https://github.com/falconandrea/alchemy-road-to-web3/tree/main/week-3)
+
+---
+
+## Fourth week
+
+### Create an NFT Gallery
+
+**Technologies used**: Alchemy API, NextJS, Replit.
+
+[More info](https://github.com/falconandrea/alchemy-road-to-web3/tree/main/week-4)
