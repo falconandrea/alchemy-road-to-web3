@@ -7,8 +7,9 @@ export default function Home () {
   const [collection, setCollectionAddress] = useState('')
   const [NFTs, setNFTs] = useState([])
   const [fetchCollection, setFetchCollection] = useState(false)
+  const [moreKey, setMoreKey] = useState('')
 
-  const fetchNFTs = async () => {
+  const fetchNFTs = async (startFrom = '') => {
     const requestOptions = {
       method: 'GET',
       redirect: 'follow'
@@ -29,9 +30,14 @@ export default function Home () {
         }
       }
 
+      if (startFrom !== '') fetchURL += '&pageKey=' + startFrom
+
       const result = await fetch(fetchURL, requestOptions).then(data => data.json())
+      if (result.pageKey) setMoreKey(result.pageKey)
+      else setMoreKey('')
+
       if (result && (result.ownedNfts || result.nfts)) {
-        setNFTs(result.ownedNfts ? result.ownedNfts : result.nfts)
+        setNFTs(NFTs.concat(result.ownedNfts ? result.ownedNfts : result.nfts))
         console.log('result', NFTs)
       }
     }
@@ -86,6 +92,9 @@ export default function Home () {
               )
             })}
           </div>
+          {moreKey !== '' && (
+            <button class='mx-auto block rounded-xm border-2 px-4 py-2' onClick={() => fetchNFTs(moreKey)}>Load More</button>
+          )}
         </div>
       </main>
     </div>
