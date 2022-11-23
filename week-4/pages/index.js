@@ -8,13 +8,13 @@ export default function Home () {
   const [NFTs, setNFTs] = useState([])
   const [fetchCollection, setFetchCollection] = useState(false)
   const [moreKey, setMoreKey] = useState('')
+  const apiKey = process.env.NEXT_PUBLIC_API_KEY || ''
 
   const fetchNFTs = async (startFrom = '') => {
     const requestOptions = {
       method: 'GET',
       redirect: 'follow'
     }
-    const apiKey = 'KfC15MXcmcB-5wGEnJB7UJDLhhKCeJs8'
     const baseURL = `https://eth-mainnet.g.alchemy.com/v2/${apiKey}/`
     let fetchURL = `${baseURL}`
 
